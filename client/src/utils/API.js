@@ -18,5 +18,8 @@ export default {
       "0101";
     console.log(queryURL);
     return axios.get(queryURL);
+  },
+  saveArticle: function(articleData) {
+    return axios.post("/api/article", articleData);
   }
 };

@@ -3,7 +3,6 @@ import Search from "../components/Search";
 import Results from "../components/Results";
 import API from "../utils/API.js";
 
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +32,15 @@ class Home extends Component {
       })
       .catch(err => console.log(err));
   };
+  save = () => {
+    API.saveArticle({
+      headline: this.props.obj.title,
+      link: this.props.obj.link,
+      date: this.props.obj.date
+    })
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <div>
@@ -43,7 +51,7 @@ class Home extends Component {
           term={this.state.term}
           handleInputChange={this.handleInputChange}
         />
-        <Results results={this.state.results} />
+        <Results save={this.save} results={this.state.results} />
       </div>
     );
   }
