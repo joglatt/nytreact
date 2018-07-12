@@ -7,9 +7,9 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: "",
-      startYear: "",
-      endYear: "",
+      term: "bill gates",
+      startYear: "2017",
+      endYear: "2018",
       results: []
     };
   }
@@ -32,11 +32,11 @@ class Home extends Component {
       })
       .catch(err => console.log(err));
   };
-  save = () => {
+  saveArticle = (obj) => {
     API.saveArticle({
-      headline: this.props.obj.title,
-      link: this.props.obj.link,
-      date: this.props.obj.date
+      headline: obj.headline.main,
+      link: obj.web_url,
+      date: obj.pub_date
     })
       .then(res => console.log(res))
       .catch(err => console.log(err));
@@ -51,7 +51,7 @@ class Home extends Component {
           term={this.state.term}
           handleInputChange={this.handleInputChange}
         />
-        <Results save={this.save} results={this.state.results} />
+        <Results saveArticle={this.saveArticle} results={this.state.results} />
       </div>
     );
   }

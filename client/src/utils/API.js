@@ -20,6 +20,6 @@ export default {
     return axios.get(queryURL);
   },
   saveArticle: function(articleData) {
-    return axios.post("/api/article", articleData);
+    return axios.post("/api/articles", articleData);
   }
 };
