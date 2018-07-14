@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Search from "../components/Search";
 import Results from "../components/Results";
-import API from "../utils/API.js";
+import API from "../utils/API";
 
 class Home extends Component {
   constructor(props) {

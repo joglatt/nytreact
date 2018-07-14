@@ -19,7 +19,7 @@ const articleFunctions = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  remove: function(req, res) {
+  delete: function(req, res) {
     db.Article.findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
@@ -31,7 +31,7 @@ router.get("/api/articles", articleFunctions.findAll);
 
 router.post("/api/articles", articleFunctions.create);
 
-router.delete("/api/articles/:id", articleFunctions.remove);
+router.delete("/api/articles/:id", articleFunctions.delete);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
@@ -39,3 +39,5 @@ router.use(function(req, res) {
 });
 
 module.exports = router;
+
+

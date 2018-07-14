@@ -1,7 +1,5 @@
 import axios from "axios";
 
-// Export an object containing methods we'll use for accessing the Dog.Ceo API
-
 export default {
   search: function(term, start, end) {
     term = term.replace(/ /g, "+");
@@ -21,5 +19,11 @@ export default {
   },
   saveArticle: function(articleData) {
     return axios.post("/api/articles", articleData);
+  },
+  getArticles: function() {
+    return axios.get("/api/articles");
+  },
+  deleteArticle: function(id) {
+    return axios.delete("api/articles/" + id);
   }
 };
