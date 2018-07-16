@@ -30,8 +30,8 @@ class Saved extends Component {
   render() {
     // console.log(this.state.articles);
     return (
-      <div>
-        Saved
+      <div className='container container-fluid text-center'>
+        <h3>Saved Articles</h3>
         {this.state.articles.map(article => (
           <SavedItem key={article._id} article={article} deleteArticle={this.deleteArticle} />
         ))}

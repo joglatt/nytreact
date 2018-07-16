@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <div>
+            <h1 className="jumbotron jumbotron-fluid text-center">
                 NYT Search
-            </div>
+            </h1>
         );
     }
 }

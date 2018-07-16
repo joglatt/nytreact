@@ -38,7 +38,7 @@ class Search extends Component {
           // disabled={!(term && startYear && endYear)}
           className="btn btn-success"
         >
-          Submit
+          Submit Search
         </button>
       </div>
     );
