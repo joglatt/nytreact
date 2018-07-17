@@ -25,7 +25,7 @@ class Search extends Component {
           value={startYear}
           onChange={handleInputChange}
           name="startYear"
-          placeholder="Start Year"
+          placeholder="Starting Year"
         />
        Ending Year 
         <input
@@ -33,7 +33,7 @@ class Search extends Component {
           value={endYear}
           onChange={handleInputChange}
           name="endYear"
-          placeholder="End Year"
+          placeholder="Ending Year"
         />
         <button
           onClick={handleFormSubmit}
