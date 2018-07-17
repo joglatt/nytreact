@@ -11,6 +11,7 @@ class Search extends Component {
     } = this.props;
     return (
       <div>
+        Search Term
         <input
           className="form-control"
           value={term}
@@ -18,7 +19,7 @@ class Search extends Component {
           name="term"
           placeholder="Search Term"
         />
-
+      Starting Year
         <input
           className="form-control"
           value={startYear}
@@ -26,6 +27,7 @@ class Search extends Component {
           name="startYear"
           placeholder="Start Year"
         />
+       Ending Year 
         <input
           className="form-control"
           value={endYear}
