@@ -7,9 +7,9 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: "bill gates",
-      startYear: "2017",
-      endYear: "2018",
+      term: "",
+      startYear: "",
+      endYear: "",
       results: []
     };
   }
